@@ -79,3 +79,5 @@
  -concat method is used on history array to prevent mutation of original array
 -moves variable will map history array to allow player to go back to certain moves or go back to start
  of game, moves will be output in an ordered list in the Game components return method.
+-had an issue where squares was undefined, forgot to update calculateWinner in Game components render
+ function to use current rather than this.state
