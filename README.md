@@ -56,3 +56,9 @@
 -calculateWinner function will be added to end of js file. It contains an array of winning line arrays
  and a for loop to itterate through winning arrays
 -Next will be updating the Board components render() function to display if a winner is found
+
+2022/09/16
+8:30AM
+
+-winner variable will call calculateWinner function with the squares state, update the status based on
+ who is next or if a player wins.
