@@ -62,3 +62,20 @@
 
 -winner variable will call calculateWinner function with the squares state, update the status based on
  who is next or if a player wins.
+-update to Board components handleClick function will ignore a click if there is a winner or if a 
+ square has already been clicked
+-game is technically complete at this point, further exercise will add in time travel functionality
+ to go back to previous moves
+-having an issue with app loading a blank page when running npm start
+ -issue was when calling calculateWinner function, I called the winner state rather than the squares
+  state, found issue by looking through developer console errors
+-history array will be contained in Game component to go back to previous moves
+ -constructor is added and state is defined with history array
+-constructor in Board component will be deleted and squares and onClick props will be recieved from 
+ Game component, this.state.squares[i] is replaced with this.props.squares[i] and this.handleClick()
+ is replaced with this.props.onClick() in renderSquare function
+-Game components render function will be updated to display recent history to determine game status
+-Board component handleClick method is moved to Game component and modified to update history display
+ -concat method is used on history array to prevent mutation of original array
+-moves variable will map history array to allow player to go back to certain moves or go back to start
+ of game, moves will be output in an ordered list in the Game components return method.
