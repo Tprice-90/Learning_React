@@ -83,7 +83,7 @@
  function to use current rather than this.state
 
 2022/09/17
-9:30AM
+9:30AM - 10:00AM
 
 -move index will be used as a key in the history list, implemented as a button to return to that
  state
