@@ -58,7 +58,7 @@
 -Next will be updating the Board components render() function to display if a winner is found
 
 2022/09/16
-8:30AM
+8:30AM - 11-30AM
 
 -winner variable will call calculateWinner function with the squares state, update the status based on
  who is next or if a player wins.
@@ -81,3 +81,32 @@
  of game, moves will be output in an ordered list in the Game components return method.
 -had an issue where squares was undefined, forgot to update calculateWinner in Game components render
  function to use current rather than this.state
+
+2022/09/17
+9:30AM
+
+-move index will be used as a key in the history list, implemented as a button to return to that
+ state
+-stepNumber: 0 is added to the Game components constructor and will be increased based on each turn
+-jumpTo function will increment the stepNumber, and xIsNext will be refactored to be true when step
+ is an even number
+-handleClick function will include stepNumber which will be updated with history.lengthin the argument
+ this.state.history will be replace with this.state.history.slice() to prevent mutation of the 
+ original array, allowing us to go back in time to previous moves
+-to prevent the Game components render method from rendering the last move, update the current 
+ property to be the current state of the stepNumber
+-at this point the game should be complete, testing now...
+
+Test
+1.Does the game go back to the start by clicking "Go to game start"?
+  Yes, and moves list remains the same
+2.Does the game go back to previous moves after going to game start?
+  Yes
+3.Do moves history get updated after starting a new game?
+  Yes
+
+Notes
+-When going back to game start, previous moves remain until a square is selected
+-React feels similar to Angular but less robust in its functionality, this is to be expected 
+ considering it is a Library rather than a framework
+-Will look more into how state is maintained and handled between components
